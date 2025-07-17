@@ -1,0 +1,22 @@
+﻿<Window x:Class="FUI_SWF_Converter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FUI_SWF_Converter"
+        mc:Ignorable="d"
+        Title="FUI SWF Converter" Height="450" Width="800" Icon="/FUI SWF Converter.png">
+    <Grid>
+        <StackPanel Margin="20">
+            <Button x:Name="btnSelectFolder" Content="Select Folder" Margin="0,0,0,10" Click="BtnSelectFolder_Click"/>
+            <TextBlock x:Name="txtSelectedFolder" Text="No folder selected." Margin="0,0,0,10"/>
+            <Button x:Name="btnConvertToSwf" Content="Convert .fui → .swf" Margin="0,0,0,5" Click="BtnConvertToSwf_Click"/>
+            <Button x:Name="btnConvertToFui" Content="Convert .swf → .fui" Margin="0,0,0,10" Click="BtnConvertToFui_Click"/>
+            <TextBlock x:Name="txtStatus" Text="" Foreground="Green"/>
+            <ProgressBar x:Name="progressBar" Height="20" Margin="0,10,0,10" Minimum="0" Maximum="100" Value="0"/>
+            <TextBox x:Name="logBox" Height="150" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" IsReadOnly="True"/>
+            <CheckBox x:Name="themeToggle" Content="Dark Mode" Checked="ThemeToggle_Checked" Unchecked="ThemeToggle_Unchecked" Margin="0,10,0,10"/>
+            <TextBlock Text="Select a folder containing .fui or .swf files to convert." Margin="0,10,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
