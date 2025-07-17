@@ -38,6 +38,9 @@ namespace FUI_SWF_Converter
         public MainWindow()
         {
             InitializeComponent();
+            bool isDark = IsSystemInDarkMode();
+            themeToggle.IsChecked = isDark;
+            LoadTheme(isDark);
         }
 
         // Select folder button click event
