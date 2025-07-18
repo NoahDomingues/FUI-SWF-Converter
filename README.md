@@ -32,7 +32,8 @@ Converted files are renamed and saved in-place. The tool does not overwrite orig
 
 ## 🛠️ Features
 
-- Convert `.fui` files to `.swf`, and vice versa
+- Convert `.fui` files to `.swf`
+- Convert `.swf` files to `.fui`
 - Batch processing with progress feedback
 - Clean, modern UI with embedded Orbitron font
 - Auto-scrolling log box for conversion output
