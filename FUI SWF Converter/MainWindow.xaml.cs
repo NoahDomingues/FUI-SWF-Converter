@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using Microsoft.Win32;
+using System.Diagnostics;
 
 // FUI SWF Converter
 // A simple tool to convert .fui files to .swf and vice versa.
@@ -128,6 +129,22 @@ namespace FUI_SWF_Converter
 
             return renamedCount;
         }
+
+        // GitHub repository link click handler
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri) { UseShellExecute = true });
+            e.Handled = true;
+        }
+
+        // About link click handler
+        private void AboutLink_Click(object sender, RoutedEventArgs e)
+        {
+            var aboutWindow = new AboutWindow();
+            aboutWindow.Owner = this;
+            aboutWindow.ShowDialog();
+        }
+
 
     }
 }

@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\logo.png" />
     <None Remove="FUI SWF Converter.png" />
   </ItemGroup>
 
@@ -22,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\logo.png" />
     <Resource Include="Fonts\Orbitron Bold.ttf" />
     <Resource Include="FUI SWF Converter.png" />
     <Resource Include="Themes\modern.xaml" />
