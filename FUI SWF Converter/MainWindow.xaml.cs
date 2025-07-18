@@ -58,7 +58,7 @@ namespace FUI_SWF_Converter
             if (Directory.Exists(selectedFolder))
             {
                 int count = await RenameFilesAsync(selectedFolder, ".fui", ".swf");
-                txtStatus.Text = $"✅ Renamed {count} .fui files to .swf";
+                txtStatus.Text = $"✅ Converted {count} .fui files to .swf";
             }
         }
 
@@ -68,7 +68,7 @@ namespace FUI_SWF_Converter
             if (Directory.Exists(selectedFolder))
             {
                 int count = await RenameFilesAsync(selectedFolder, ".swf", ".fui");
-                txtStatus.Text = $"✅ Renamed {count} .swf files to .fui";
+                txtStatus.Text = $"✅ Converted {count} .swf files to .fui";
             }
         }
 
