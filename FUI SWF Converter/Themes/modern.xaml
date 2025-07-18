@@ -38,19 +38,24 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}"
+                    <Border x:Name="border"
+                        Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="4">
-                        <ContentPresenter HorizontalAlignment="Center"
+                        <ContentPresenter x:Name="contentPresenter"
+                                      HorizontalAlignment="Center"
                                       VerticalAlignment="Center"
                                       Margin="5"
-                                      RecognizesAccessKey="True"/>
+                                      Content="{TemplateBinding Content}"
+                                      ContentTemplate="{TemplateBinding ContentTemplate}"
+                                      RecognizesAccessKey="True"
+                                      />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{StaticResource AccentBrush}"/>
-                            <Setter Property="Foreground" Value="{StaticResource BackgroundBrush}"/>
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource AccentBrush}"/>
+                            <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource BackgroundBrush}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -75,7 +80,9 @@
     <Style TargetType="ProgressBar">
         <Setter Property="Height" Value="20"/>
         <Setter Property="Foreground" Value="{StaticResource AccentBrush}"/>
-        <Setter Property="Background" Value="{StaticResource TextBrush}"/>
+        <!-- fill color -->
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <!-- track color -->
         <Setter Property="Margin" Value="5"/>
     </Style>
 

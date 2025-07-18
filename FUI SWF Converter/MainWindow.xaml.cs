@@ -86,7 +86,7 @@ namespace FUI_SWF_Converter
             progressBar.Value = 0;
 
             progressTimer = new DispatcherTimer();
-            progressTimer.Interval = TimeSpan.FromMilliseconds(10); // speed of progress update
+            progressTimer.Interval = TimeSpan.FromMilliseconds(02); // speed of progress update
             progressTimer.Tick += (s, e) =>
             {
                 if (visualProgress < targetProgress)
@@ -121,7 +121,7 @@ namespace FUI_SWF_Converter
                 }
 
                 progressBar.Value = ((double)(i + 1) / totalFiles) * 100;
-                await Task.Yield();  // let UI breathe; otherwise it won't update live
+                await Task.Yield();
             }
 
             return renamedCount;
