@@ -45,7 +45,7 @@
                    Margin="0,0,0,20"/>
 
         <!-- Select Folder -->
-        <Button Grid.Row="1" Click="BtnSelectFolder_Click" Margin="0,0,0,10">
+        <Button Grid.Row="1" Click="BtnSelectFolder_Click" Margin="0,0,0,10" ToolTip="Select folder for file conversion">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -78,7 +78,7 @@
             </Grid.ColumnDefinitions>
 
             <!-- Convert .fui → .swf -->
-            <Button x:Name="btnConvertToSwf" Grid.Column="0" Click="BtnConvertToSwf_Click" Margin="0,0,5,0">
+            <Button x:Name="btnConvertToSwf" Grid.Column="0" Click="BtnConvertToSwf_Click" Margin="0,0,5,0" ToolTip="Convert FUI files to SWF">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -98,7 +98,7 @@
             </Button>
 
             <!-- Convert .swf → .fui -->
-            <Button x:Name="btnConvertToFui" Grid.Column="1" Click="BtnConvertToFui_Click" Margin="5,0,0,0">
+            <Button x:Name="btnConvertToFui" Grid.Column="1" Click="BtnConvertToFui_Click" Margin="5,0,0,0" ToolTip="Convert SWF files to FUI">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"/>
@@ -132,7 +132,8 @@
                      Minimum="0"
                      Maximum="100"
                      Value="0"
-                     Margin="0,0,0,10"/>
+                     Margin="0,0,0,10"
+                     ToolTip="Progress bar"/>
 
         <!-- Log Box -->
         <TextBox x:Name="logBox"
@@ -142,7 +143,8 @@
                  IsReadOnly="True"
                  Margin="0"
                  Padding="5"
-                 HorizontalAlignment="Stretch"/>
+                 HorizontalAlignment="Stretch"
+                 ToolTip="Logs"/>
 
         <!-- Footer Text -->
         <TextBlock Grid.Row="7"
@@ -156,19 +158,27 @@
             VerticalAlignment="Center"
             >
 
-            <TextBlock Margin="0,0,10,0" VerticalAlignment="Center">
-        <Hyperlink Click="AboutLink_Click"
-                   Foreground="{StaticResource AccentBrush}">
-            About
-        </Hyperlink>
+            <TextBlock VerticalAlignment="Center" ToolTip="About FUI SWF Converter">
+                <Hyperlink Click="AboutLink_Click"
+                Foreground="{StaticResource AccentBrush}">
+                    About
+                </Hyperlink>
             </TextBlock>
 
-            <TextBlock VerticalAlignment="Center">
-        <Hyperlink NavigateUri="https://github.com/NoahDomingues/FUI-SWF-Converter"
-                   RequestNavigate="Hyperlink_RequestNavigate"
-                   Foreground="{StaticResource AccentBrush}">
-            GitHub
-        </Hyperlink>
+            <TextBlock VerticalAlignment="Center" ToolTip="Operation Flashpoint Discord server">
+                <Hyperlink NavigateUri="https://discord.gg/Z88NnTgpWU"
+                RequestNavigate="Hyperlink_RequestNavigate"
+                Foreground="{StaticResource AccentBrush}">
+                    Discord
+                </Hyperlink>
+            </TextBlock>
+
+            <TextBlock VerticalAlignment="Center" ToolTip="GitHub repository">
+                <Hyperlink NavigateUri="https://github.com/NoahDomingues/FUI-SWF-Converter"
+                RequestNavigate="Hyperlink_RequestNavigate"
+                Foreground="{StaticResource AccentBrush}">
+                    GitHub
+                </Hyperlink>
             </TextBlock>
         </StackPanel>
 
