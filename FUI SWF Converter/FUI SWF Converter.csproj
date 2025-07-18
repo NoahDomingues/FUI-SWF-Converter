@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>FUI SWF Converter.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,6 +17,10 @@
 
   <ItemGroup>
     <Page Remove="Themes\modern.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="FUI SWF Converter.ico" />
   </ItemGroup>
 
   <ItemGroup>
