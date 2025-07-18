@@ -21,7 +21,7 @@ Built with WPF and styled for clarity, the converter features a bold yellow/grey
 
 ## 💡 Usage
 
-<img width="100%" alt="image" src="https://github.com/user-attachments/assets/693c96ac-4cd8-41e9-a056-8ca66b8aa58c" />
+<a href="https://discord.gg/Z88NnTgpWU"><img width="100%" alt="image" src="https://github.com/user-attachments/assets/08104546-4e95-4c7b-b296-2232653424b5" /></a>
 
 - Click the **Select Folder** button to choose a directory containing `.fui` or `.swf` files.
 - Use the **Convert .fui → .swf** or **Convert .swf → .fui** buttons to batch-convert all files in the selected folder.
