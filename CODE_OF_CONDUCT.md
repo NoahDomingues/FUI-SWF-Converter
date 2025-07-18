@@ -1,6 +1,6 @@
 # 🤝 Code of Conduct
 
-[<img src="https://github.com/user-attachments/assets/8296952d-b975-4e73-9e24-76e1156e627b">](https://discord.gg/Z88NnTgpWU)
+[<img src="https://github.com/user-attachments/assets/b20a8e62-95f1-4a9c-8d39-609dbde508ad">](https://discord.gg/Z88NnTgpWU)
 
 - We are committed to providing a friendly, safe and welcoming environment for all, regardless of level of experience, gender identity and expression, sexual orientation, disability, personal appearance, body size, race, ethnicity, age, religion, nationality, or other similar characteristic.
 - Please avoid using overtly sexual aliases or other nicknames that might detract from a friendly, safe and welcoming environment for all.
