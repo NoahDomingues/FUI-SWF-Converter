@@ -2,7 +2,7 @@
 
 A simple, modern utility for converting between Flash UI (`.fui`) and Adobe Shockwave (`.swf`) files used in Operation Flashpoint: Dragon Rising.
 
-[<img src="https://github.com/user-attachments/assets/d73ffbd2-a043-4894-b9fc-b1ad10105bf3">](https://discord.gg/Z88NnTgpWU)
+[<img src="https://github.com/user-attachments/assets/b20a8e62-95f1-4a9c-8d39-609dbde508ad">](https://discord.gg/Z88NnTgpWU)
 
 ## 🐉 FUI SWF Converter
 
