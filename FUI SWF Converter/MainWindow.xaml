@@ -31,11 +31,24 @@
         </Grid.RowDefinitions>
 
         <!-- Select Folder -->
-        <Button x:Name="btnSelectFolder"
-                Grid.Row="0"
-                Content="Select Folder"
-                Click="BtnSelectFolder_Click"
-                Margin="0,0,0,10"/>
+        <Button Click="BtnSelectFolder_Click" Margin="0,0,0,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0"
+                   FontFamily="Segoe MDL2 Assets"
+                   FontSize="16"
+                   Text="&#xED25;"
+                   Foreground="{DynamicResource AccentBrush}"
+                   VerticalAlignment="Center"
+                   Margin="0,2,5,0"/>
+                <TextBlock Grid.Column="1"
+                   Text="Select Folder"
+                   VerticalAlignment="Center"/>
+            </Grid>
+        </Button>
 
         <!-- Folder Path -->
         <TextBlock x:Name="txtSelectedFolder"
@@ -50,18 +63,47 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btnConvertToSwf"
-                    Grid.Column="0"
-                    Content="Convert .fui → .swf"
-                    Click="BtnConvertToSwf_Click"
-                    Margin="0,0,5,0"/>
+            <!-- Convert .fui → .swf -->
+            <Button x:Name="btnConvertToSwf" Grid.Column="0" Click="BtnConvertToSwf_Click" Margin="0,0,5,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="16"
+                       Text="&#xEBE7;"
+                       Foreground="{DynamicResource AccentBrush}"
+                       VerticalAlignment="Center"
+                       Margin="0,2,5,0"/>
+                    <TextBlock Grid.Column="1"
+                       Text="Convert .fui → .swf"
+                       VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
 
-            <Button x:Name="btnConvertToFui"
-                    Grid.Column="1"
-                    Content="Convert .swf → .fui"
-                    Click="BtnConvertToFui_Click"
-                    Margin="5,0,0,0"/>
+            <!-- Convert .swf → .fui -->
+            <Button x:Name="btnConvertToFui" Grid.Column="1" Click="BtnConvertToFui_Click" Margin="5,0,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0"
+                       FontFamily="Segoe MDL2 Assets"
+                       FontSize="16"
+                       Text="&#xEBE7;"
+                       Foreground="{DynamicResource AccentBrush}"
+                       VerticalAlignment="Center"
+                       Margin="0,2,5,0"/>
+                    <TextBlock Grid.Column="1"
+                       Text="Convert .swf → .fui"
+                       VerticalAlignment="Center"/>
+                </Grid>
+            </Button>
         </Grid>
+
 
         <!-- Status -->
         <TextBlock x:Name="txtStatus"

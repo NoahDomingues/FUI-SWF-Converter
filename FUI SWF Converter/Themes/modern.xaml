@@ -76,6 +76,14 @@
         <Setter Property="CaretBrush" Value="{StaticResource AccentBrush}"/>
     </Style>
 
+    <!-- ScrollBar - part of logBox -->
+    <Style TargetType="ScrollBar">
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource AccentBrush}"/>
+        <Setter Property="Width" Value="10"/>
+    </Style>
+
+
     <!-- ProgressBar -->
     <Style TargetType="ProgressBar">
         <Setter Property="Height" Value="20"/>

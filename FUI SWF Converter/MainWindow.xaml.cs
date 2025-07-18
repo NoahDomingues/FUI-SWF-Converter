@@ -114,10 +114,12 @@ namespace FUI_SWF_Converter
                     File.Move(file, newPath);
                     renamedCount++;
                     logBox.AppendText($"Renamed {file} → {newPath}\n");
+                    logBox.ScrollToEnd();
                 }
                 else
                 {
                     logBox.AppendText($"Skipped (already exists): {newPath}\n");
+                    logBox.ScrollToEnd();
                 }
 
                 progressBar.Value = ((double)(i + 1) / totalFiles) * 100;
