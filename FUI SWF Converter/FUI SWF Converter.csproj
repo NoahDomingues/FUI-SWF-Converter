@@ -14,11 +14,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Remove="Themes\modern.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="FUI SWF Converter.png" />
+    <Resource Include="Themes\modern.xaml" />
   </ItemGroup>
 
 </Project>

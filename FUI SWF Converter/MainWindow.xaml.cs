@@ -38,9 +38,6 @@ namespace FUI_SWF_Converter
         public MainWindow()
         {
             InitializeComponent();
-            bool isDark = IsSystemInDarkMode();
-            themeToggle.IsChecked = isDark;
-            LoadTheme(isDark);
         }
 
         // Select folder button click event
@@ -128,38 +125,6 @@ namespace FUI_SWF_Converter
             }
 
             return renamedCount;
-        }
-
-        // Detect system theme and set UI accordingly
-        private bool IsSystemInDarkMode()
-        {
-            const string registryKey = @"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize";
-            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(registryKey))
-            {
-                object value = key?.GetValue("AppsUseLightTheme");
-                return value is int intValue && intValue == 0;
-            }
-        }
-
-        // Window loaded event to set initial theme
-        private void LoadTheme(bool useDark)
-        {
-            var themePath = useDark ? "Themes/DarkTheme.xaml" : "Themes/LightTheme.xaml";
-            var dict = new ResourceDictionary { Source = new Uri(themePath, UriKind.Relative) };
-
-            System.Windows.Application.Current.Resources.MergedDictionaries.Clear();
-            System.Windows.Application.Current.Resources.MergedDictionaries.Add(dict);
-        }
-
-        // Theme toggle event handlers
-        private void ThemeToggle_Checked(object sender, RoutedEventArgs e)
-        {
-            LoadTheme(true);
-        }
-
-        private void ThemeToggle_Unchecked(object sender, RoutedEventArgs e)
-        {
-            LoadTheme(false);
         }
 
     }
