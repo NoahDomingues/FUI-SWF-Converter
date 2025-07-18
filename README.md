@@ -54,7 +54,7 @@ Need help with FUI SWF Converter? Drop by the Discord server’s **#⁠🌐tech-
 [contributors-image]: https://contrib.rocks/image?repo=NoahDomingues/FUI-SWF-Converter
 [contributors-link]: https://github.com/NoahDomingues/FUI-SWF-Converter/graphs/contributors
 
-**⭐ If this tool helped you mod Operation Flashpoint, please consider giving it a Star — it means a lot! ⭐**
+**⭐ If this tool was of any use to you, please consider giving it a Star - it would make my day! ⭐**
 
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" />
