@@ -43,19 +43,16 @@
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
                         CornerRadius="4">
-                        <ContentPresenter x:Name="contentPresenter"
-                                      HorizontalAlignment="Center"
+                        <ContentPresenter HorizontalAlignment="Center"
                                       VerticalAlignment="Center"
                                       Margin="5"
                                       Content="{TemplateBinding Content}"
-                                      ContentTemplate="{TemplateBinding ContentTemplate}"
-                                      RecognizesAccessKey="True"
-                                      />
+                                      ContentTemplate="{TemplateBinding ContentTemplate}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="{StaticResource AccentBrush}"/>
-                            <Setter TargetName="contentPresenter" Property="TextElement.Foreground" Value="{StaticResource BackgroundBrush}"/>
+                            <Setter TargetName="border" Property="Background" Value="#383838"/>
+                            <!-- lighter grey -->
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -83,6 +80,11 @@
         <Setter Property="Width" Value="10"/>
     </Style>
 
+    <!-- ScrollBar styles applied directly to logBox -->
+    <Style x:Key="LogScrollBarStyle" TargetType="ScrollBar">
+        <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource AccentBrush}"/>
+    </Style>
 
     <!-- ProgressBar -->
     <Style TargetType="ProgressBar">
@@ -98,6 +100,7 @@
     <Style TargetType="TextBlock">
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
         <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontFamily" Value="pack://application:,,,/Fonts/#Orbitron Bold"/>
     </Style>
 
     <!-- CheckBox -->

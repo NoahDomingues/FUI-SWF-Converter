@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Fonts\Orbitron Bold.ttf" />
     <Resource Include="FUI SWF Converter.png" />
     <Resource Include="Themes\modern.xaml" />
   </ItemGroup>
